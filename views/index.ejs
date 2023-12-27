@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/public/styles.css">
+</head>
+<body>
+  <h1>Pokédex</h1>
+  <div>
+    <% pokemon.forEach(function(poke) { %>
+      <div>
+        <img src="<%= poke.img %>" alt="<%= poke.name %>">
+        <p><%= poke.name %></p>
+        <!-- Link to the show page -->
+        <a href="/pokemon/<%= poke.id %>">View Details</a>
+      </div>
+    <% }) %>
+  </div>
+</body>
+</html>
