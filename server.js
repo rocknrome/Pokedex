@@ -2,10 +2,13 @@
 const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
+const methodOverride = require('method-override');
 
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
 
+//Method Overrride setup
+app.use(methodOverride('_method'));
 
 //MIDDLEWARE
 app.use(express.static('public'));
@@ -40,5 +43,5 @@ app.get('/pokemon/:id', (req, res) => {
 
 // Start the server
 app.listen(PORT, () => {
-  console.log(`Server is running on port ${PORT}`);
+  console.log(`I am alive on port ${PORT}`);
 });
