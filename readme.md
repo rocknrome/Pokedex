@@ -1,4 +1,8 @@
-[![General Assembly Logo](/ga_cog.png)](https://generalassemb.ly)
+
+![Index page styling screenshot](https://github.com/rocknrome/Pokedex/assets/126816805/24498683-100c-4512-a0fa-049e282796b0)
+
+![Details page styling screenshot](https://github.com/rocknrome/Pokedex/assets/126816805/c33ed2af-828f-4d8f-b5e4-264e712ecd9a)
+
 
 # Pokedex
 
