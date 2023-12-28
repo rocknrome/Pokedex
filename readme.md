@@ -1,6 +1,7 @@
-
+#INDEX PAGE SCREENSHOT
 ![Index page styling screenshot](https://github.com/rocknrome/Pokedex/assets/126816805/24498683-100c-4512-a0fa-049e282796b0)
 
+#DETAILS PAGE SCREENSHOT
 ![Details page styling screenshot](https://github.com/rocknrome/Pokedex/assets/126816805/c33ed2af-828f-4d8f-b5e4-264e712ecd9a)
 
 
