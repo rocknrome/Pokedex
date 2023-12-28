@@ -39,6 +39,16 @@ app.get('/pokemon/new', (req, res) => {
   res.render('new');
 });
 
+// Edit Route - Display form for editing an existing Pokemon
+app.get('/pokemon/:id/edit', (req, res) => {
+  const pokeIndex = pokemon.findIndex(p => p.id === req.params.id);
+  if (pokeIndex >= 0) {
+    res.render('edit', { poke: pokemon[pokeIndex], index: pokeIndex });
+  } else {
+    res.status(404).send('Pokémon not found');
+  }
+});
+
 
 
 // Show Route
