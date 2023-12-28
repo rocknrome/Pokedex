@@ -49,7 +49,17 @@ app.get('/pokemon/:id/edit', (req, res) => {
   }
 });
 
-
+//Delete Route
+app.delete('/pokemon/:id', (req, res) => {
+  const pokeIndex = pokemon.findIndex(p => p.id === req.params.id);
+  if (pokeIndex >= 0) {
+    // Remove the pokemon at pokeIndex
+    pokemon.splice(pokeIndex, 1);
+    res.redirect('/pokemon');
+  } else {
+    res.status(404).send('Pokémon not found');
+  }
+});
 
 // Show Route
 app.get('/pokemon/:id', (req, res) => {

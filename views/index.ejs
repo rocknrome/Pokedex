@@ -23,9 +23,15 @@
         <a href="/pokemon/<%= poke.id %>/edit" class="button">Edit</a>
         <br>
         <br>
-        <form method="POST" action="/pokemon/<%= poke.id %>?_method=DELETE">
-          <button type="submit" class="button">Delete</button>
+        <!--Delete with double confirmation-->
+        <form method="POST" action="/pokemon/<%= poke.id %>?_method=DELETE" onsubmit="return confirmDelete();">
+          <button type="submit" class="button delete-button">Delete</button>
         </form>
+        <script>
+          function confirmDelete() {
+            return confirm('Are you sure you want to delete this Pokémon?');
+          }
+        </script>
       </div>
     <% }) %>
   </div>
