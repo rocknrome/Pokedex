@@ -16,6 +16,10 @@ app.use(express.static('public'));
 // Require Pokemon data file
 const pokemon = require('./pokemon.js');
 
+//POST/PUT Handler
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: true }));
+
 
 //ROUTES
 
@@ -29,6 +33,13 @@ app.get('/pokemon', (req, res) => {
   // Rendering index.ejs
   res.render('index', { pokemon });
 });
+
+//Add New Pokemon Route
+app.get('/pokemon/new', (req, res) => {
+  res.render('new');
+});
+
+
 
 // Show Route
 app.get('/pokemon/:id', (req, res) => {

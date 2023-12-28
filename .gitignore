@@ -1,11 +1,4 @@
-<<<<<<< HEAD
 *.txt
 *.png
 .env
-/node-modules
-=======
-*.txt
-*.png
-.env
-/node-modules
->>>>>>> d7a14a4718d1d52385dbdd32d61baf3b1166b90a
+/node_modules

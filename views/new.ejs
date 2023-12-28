@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Pokemon</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Add a New Pokemon</h1>
+  </div>
+
+  <form action="/pokemon" method="POST">
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="img">Image URL:</label>
+      <input type="text" id="img" name="img" required>
+    </div>
+
+    <div class="form-group">
+      <label for="type">Type:</label>
+      <input type="text" id="type" name="type" required>
+    </div>
+
+    <div class="form-group">
+      <label for="hp">HP:</label>
+      <input type="number" id="hp" name="hp" required>
+    </div>
+
+    <div class="form-group">
+      <label for="attack">Attack:</label>
+      <input type="number" id="attack" name="attack" required>
+    </div>
+
+    <div class="form-group">
+      <label for="defense">Defense:</label>
+      <input type="number" id="defense" name="defense" required>
+    </div>
+    <button type="submit" class="button">Add Pokémon</button>
+  </form>
+
+  <a href="/pokemon" class="button">Return to Pokédex List</a>
+</body>
+</html>
