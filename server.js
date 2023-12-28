@@ -49,6 +49,26 @@ app.get('/pokemon/:id/edit', (req, res) => {
   }
 });
 
+//Update Route
+app.put('/pokemon/:id', (req, res) => {
+  const pokeIndex = pokemon.findIndex(p => p.id === req.params.id);
+  if (pokeIndex >= 0) {
+      // Updating only the specified properties
+      pokemon[pokeIndex].name = req.body.name;
+      pokemon[pokeIndex].type = req.body.type.split(',').map(t => t.trim());
+      pokemon[pokeIndex].stats.hp = req.body.hp;
+      pokemon[pokeIndex].stats.attack = req.body.attack;
+      pokemon[pokeIndex].stats.defense = req.body.defense;
+
+      res.redirect(`/pokemon/${req.params.id}`);
+  } else {
+      res.status(404).send('Pokémon not found');
+  }
+});
+
+
+
+
 //Delete Route
 app.delete('/pokemon/:id', (req, res) => {
   const pokeIndex = pokemon.findIndex(p => p.id === req.params.id);

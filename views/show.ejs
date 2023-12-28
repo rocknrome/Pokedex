@@ -8,10 +8,9 @@
   <div>
     <img src="<%= poke.img %>" alt="<%= poke.name %>">
     <p>ID: <%= poke.id %></p>
-    <p>Type: <%= poke.type.join(', ') %></p>
+    <p>Type: <%= Array.isArray(poke.type) ? poke.type.join(', ') : poke.type %></p>
     <p>HP: <%= poke.stats.hp %></p>
   </div>
   <a href="/pokemon" class="button return-button">Return to Pokédex List</a>
-
 </body>
 </html>
